@@ -1,5 +1,7 @@
 # Ember-newton-cradle-loader
 
+<a href="http://shipshape.io/"><img src="http://i.imgur.com/EVjM7AV.png" width="100" height="100"/></a>
+
 This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
