@@ -1,0 +1,1 @@
+export { default } from 'ember-newton-cradle-loader/components/newton-cradle-loader/component';

@@ -2,5 +2,8 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-newton-cradle-loader'
+  name: 'ember-newton-cradle-loader',
+  included: function(app) {
+    this._super.included(app);
+  }
 };
