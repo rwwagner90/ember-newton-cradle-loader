@@ -8,3 +8,8 @@
 [![Build Status](https://travis-ci.org/shipshapecode/ember-newton-cradle-loader.svg)](https://travis-ci.org/shipshapecode/ember-newton-cradle-loader)
 [![Code Climate](https://codeclimate.com/github/shipshapecode/ember-newton-cradle-loader/badges/gpa.svg)](https://codeclimate.com/github/shipshapecode/ember-newton-cradle-loader)
 [![Test Coverage](https://codeclimate.com/github/shipshapecode/ember-newton-cradle-loader/badges/coverage.svg)](https://codeclimate.com/github/shipshapecode/ember-newton-cradle-loader/coverage)
+
+This addon automatically creates an `application-loading.hbs` template for you, and drops a nice newton cradle loading image in it, so that whenever your model hooks are waiting to resolve, the loader will show up.
+
+# Installation
+`ember install ember-newton-cradle-loader`
