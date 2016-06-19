@@ -11,7 +11,7 @@
     "start": "ember server",
     "test": "ember try:each"
   },
-  "repository": "",
+  "repository": "https://github.com/shipshapecode/ember-newton-cradle-loader",
   "engines": {
     "node": ">= 0.10.0"
   },
@@ -49,6 +49,7 @@
     "ember-cli-sass": "5.3.1"
   },
   "ember-addon": {
-    "configPath": "tests/dummy/config"
+    "configPath": "tests/dummy/config",
+    "demoURL": "http://shipshapecode.github.io/ember-newton-cradle-loader/"
   }
 }
