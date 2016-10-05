@@ -1,8 +1,8 @@
 {
   "name": "ember-newton-cradle-loader",
   "dependencies": {
-    "ember": "~2.8.0",
-    "ember-cli-shims": "0.1.1",
+    "ember": "~2.9.0-beta.4",
+    "ember-cli-shims": "0.1.3",
     "font-awesome": "~4.5.0"
   }
 }
