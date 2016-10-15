@@ -5,7 +5,7 @@
 .newton-cradle-loader {
   .container {
     left: 50%;
-    margin: auto -50px;
+    margin: auto calc(#{_encl('cradle-size')} * -3.5);
     position: absolute;
     top: 50%;
   }
