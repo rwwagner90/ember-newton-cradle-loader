@@ -13,8 +13,8 @@
   .swing div {
     border-radius: 50%;
     float: left;
-    height: 1em;
-    width: 1em;
+    height: _encl('cradle-size');
+    width: _encl('cradle-size');
 
     &:nth-of-type(1) {
       background: -webkit-linear-gradient(left, #385c78 0%, #325774 100%);
@@ -60,7 +60,7 @@
       -webkit-filter: blur(1px);
       filter: blur(1px);
       float: left;
-      width: 1em;
+      width: _encl('cradle-size');
       height: .25em;
       border-radius: 50%;
       background: #e3dbd2;

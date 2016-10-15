@@ -1,0 +1,14 @@
+//////////////////////////////
+// Variables
+//////////////////////////////
+
+// Ember Newton Cradle Loader Defaults
+$ember-newton-cradle-loader-defaults: (
+  'cradle-size': 1em
+);
+
+// Empty config if user does not add their own
+$ember-newton-cradle-loader: () !default;
+
+// Merge defaults and user added config
+$ember-newton-cradle-loader: map-merge($ember-newton-cradle-loader-defaults, $ember-newton-cradle-loader);
