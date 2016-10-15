@@ -3,5 +3,6 @@ import layout from './template';
 const { Component } = Ember;
 
 export default Component.extend({
-  layout
+  layout,
+  classNames: ['newton-cradle-loader']
 });
