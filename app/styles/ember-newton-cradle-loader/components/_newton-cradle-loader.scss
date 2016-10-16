@@ -30,6 +30,8 @@ $shadow-swing-distance: (_encl('cradle-size') * (_encl('swing-distance') * 0.7))
     clear: left;
     padding-top: (_encl('cradle-size') * _encl('shadow-distance'));
 
+
+
     div {
       filter: blur(1px);
       float: left;

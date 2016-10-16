@@ -3,11 +3,74 @@
 //////////////////////////////
 
 ///
-/// Shortcut function for getting value from $ember-newton-cradle-loader map
-/// @access private
-/// @param {String} $key - Key of value to be retrieved
-/// @return Value of key in $ember-newton-cradle-loader
+/// Calculates the color of a linear gradient at a specific point.
 ///
-@function _encl($key) {
-  @return map-get($ember-newton-cradle-loader, $key);
+/// @param {Color}  $start  - gradient’s start color
+/// @param {Color}  $end    - gradient’s end color
+/// @param {Number} $point  - point of the gradient (between 0 and 1, or 0% and 100%) at which we want the color
+/// @return {Color}
+///
+/// @example scss
+///   background-color: gradient-color-at(#BBE087, #DCDE85, 0.4);
+///
+/// credit: https://gist.github.com/paulozoom/23ebed1c8c07d9455413
+
+@function gradient-color-at($start, $end, $point) {
+  $error-message: "$point needs to be a percentage (0% to 100%) or a unitless number (0 to 1)";
+  $unit: unit($point);
+  // $point needs to be unitless or percentage
+  @if $unit != "" and $unit != "%" {
+    @error $error-message;
+  }
+  @else {
+    // convert $point to fraction
+    @if $unit == "%" { $point: $point / 100%; }
+    // check if within bounds
+    @if $point < 0 or $point > 1 { @error $error-message; }
+  }
+
+  $red: red($start) + ($point * (red($end)- red($start)));
+  $green: green($start) + ($point * (green($end)- green($start)));
+  $blue: blue($start) + ($point * (blue($end)- blue($start)));
+
+  @return rgb($red, $green, $blue);
+}
+
+@function linear-gradient-colors-list($start-color, $end-color) {
+  $list: ();
+
+  @for $i from 1 through 8 {
+    $start-point: ($i - 1) * 0.125;
+    $end-point: $i * 0.125;
+
+    $gradient-a: gradient-color-at($start-color, $end-color, $start-point);
+    $gradient-b: gradient-color-at($start-color, $end-color, $end-point);
+
+    $list: append(
+      $list,
+      (
+        'a': $gradient-a,
+        'b': $gradient-b
+      )
+    );
+  }
+
+  @return $list;
+}
+
+@function linear-gradient-map($color-list, $var-prefix) {
+  $map: ();
+
+  @each $color-map in $color-list {
+    $i: index($color-list, $color-map);
+
+    $map: map-merge(
+      $map,
+      (
+        '#{$var-prefix}-#{$i}': linear-gradient(to right, map-get($color-map, 'a') 0%, map-get($color-map, 'b') 100%)
+      )
+    );
+  }
+
+  @return $map;
 }

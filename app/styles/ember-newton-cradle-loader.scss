@@ -3,8 +3,9 @@
 /////////////////////////////
 
 // Globals
-@import './ember-newton-cradle-loader/globals/variables';
 @import './ember-newton-cradle-loader/globals/functions';
+@import './ember-newton-cradle-loader/globals/variables';
+@import './ember-newton-cradle-loader/globals/helpers';
 
 // Components
 @import './ember-newton-cradle-loader/components/newton-cradle-loader';
