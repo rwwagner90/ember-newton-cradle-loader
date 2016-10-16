@@ -16,39 +16,10 @@
     height: _encl('cradle-size');
     width: _encl('cradle-size');
 
-    &:nth-of-type(1) {
-      background: -webkit-linear-gradient(left, #385c78 0%, #325774 100%);
-      background: linear-gradient(to right, #385c78 0%, #325774 100%);
-    }
-
-    &:nth-of-type(2) {
-      background: -webkit-linear-gradient(left, #325774 0%, #47536a 100%);
-      background: linear-gradient(to right, #325774 0%, #47536a 100%);
-    }
-
-    &:nth-of-type(3) {
-      background: -webkit-linear-gradient(left, #4a5369 0%, #6b4d59 100%);
-      background: linear-gradient(to right, #4a5369 0%, #6b4d59 100%);
-    }
-
-    &:nth-of-type(4) {
-      background: -webkit-linear-gradient(left, #744c55 0%, #954646 100%);
-      background: linear-gradient(to right, #744c55 0%, #954646 100%);
-    }
-
-    &:nth-of-type(5) {
-      background: -webkit-linear-gradient(left, #9c4543 0%, #bb4034 100%);
-      background: linear-gradient(to right, #9c4543 0%, #bb4034 100%);
-    }
-
-    &:nth-of-type(6) {
-      background: -webkit-linear-gradient(left, #c33f31 0%, #d83b27 100%);
-      background: linear-gradient(to right, #c33f31 0%, #d83b27 100%);
-    }
-
-    &:nth-of-type(7) {
-      background: -webkit-linear-gradient(left, #da3b26 0%, #db412c 100%);
-      background: linear-gradient(to right, #da3b26 0%, #db412c 100%);
+    @for $i from 1 through 7 {
+      &:nth-of-type(#{$i}) {
+        background: _encl('cradle-bg-#{$i}');
+      }
     }
   }
 
