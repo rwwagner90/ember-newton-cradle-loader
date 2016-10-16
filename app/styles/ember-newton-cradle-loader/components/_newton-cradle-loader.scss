@@ -28,7 +28,7 @@ $shadow-swing-distance: (_encl('cradle-size') * (_encl('swing-distance') * 0.7))
 
   .shadow {
     clear: left;
-    padding-top: 1.5em;
+    padding-top: (_encl('cradle-size') * _encl('shadow-distance'));
 
     div {
       filter: blur(1px);
@@ -95,18 +95,18 @@ $shadow-swing-distance: (_encl('cradle-size') * (_encl('swing-distance') * 0.7))
   }
 
   .swing-l {
-    animation: ball-l .425s ease-in-out infinite alternate;
+    animation: ball-l _encl('animation-duration') ease-in-out infinite alternate;
   }
 
   .swing-r {
-    animation: ball-r .425s ease-in-out infinite alternate;
+    animation: ball-r _encl('animation-duration') ease-in-out infinite alternate;
   }
 
   .shadow-l {
-    animation: shadow-l-n .425s ease-in-out infinite alternate;
+    animation: shadow-l-n _encl('animation-duration') ease-in-out infinite alternate;
   }
 
   .shadow-r {
-    animation: shadow-r-n .425s ease-in-out infinite alternate;
+    animation: shadow-r-n _encl('animation-duration') ease-in-out infinite alternate;
   }
 }
