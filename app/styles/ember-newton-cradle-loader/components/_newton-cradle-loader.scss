@@ -30,23 +30,17 @@ $shadow-swing-distance: (_encl('cradle-size') * (_encl('swing-distance') * 0.7))
     clear: left;
     padding-top: (_encl('cradle-size') * _encl('shadow-distance'));
 
-
-
     div {
       filter: blur(1px);
       float: left;
       width: _encl('cradle-size');
       height: .25em;
       border-radius: 50%;
-      background: #e3dbd2;
-    }
-
-    .shadow-l {
-      background: #d5d8d6;
-    }
-
-    .shadow-r {
-      background: #eed3ca;
+      @for $i from 1 through 7 {
+        &:nth-of-type(#{$i}) {
+          background: _encl('cradle-bg-shadow-#{$i}');
+        }
+      }
     }
   }
 
@@ -73,7 +67,7 @@ $shadow-swing-distance: (_encl('cradle-size') * (_encl('swing-distance') * 0.7))
 
   @keyframes shadow-l-n {
     0%, 50% {
-      opacity: .5;
+      opacity: 1;
       transform: translateX(0);
     }
 
@@ -91,7 +85,7 @@ $shadow-swing-distance: (_encl('cradle-size') * (_encl('swing-distance') * 0.7))
 
     50%,
     100% {
-      opacity: .5;
+      opacity: 1;
       transform: translateX(0);
     }
   }

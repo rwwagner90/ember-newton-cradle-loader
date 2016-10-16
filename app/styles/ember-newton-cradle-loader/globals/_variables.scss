@@ -13,21 +13,20 @@ $ember-newton-cradle-loader-defaults: (
   'gradient-end': #db412c
 );
 
-// Calculate gradient for cradles
-$ember-newton-cradle-gradient-colors: () !default;
-$ember-newton-cradle-gradient-colors: linear-gradient-map(
-  linear-gradient-colors-list(
-    map-get($ember-newton-cradle-loader-defaults, 'gradient-start'),
-    map-get($ember-newton-cradle-loader-defaults, 'gradient-end')
-  ),
-  'cradle-bg'
-);
-
-// Merge cradle gradient variables to defaults
-$ember-newton-cradle-loader: map-merge($ember-newton-cradle-loader-defaults, $ember-newton-cradle-gradient-colors);
-
 // Empty config if user does not add their own
 $ember-newton-cradle-loader: () !default;
 
 // Merge defaults and user added config
 $ember-newton-cradle-loader: map-merge($ember-newton-cradle-loader-defaults, $ember-newton-cradle-loader);
+// Calculate gradient for cradles
+$ember-newton-cradle-gradient-colors: () !default;
+$ember-newton-cradle-gradient-colors: cradle-gradient-map(
+  map-get($ember-newton-cradle-loader, 'gradient-start'),
+  map-get($ember-newton-cradle-loader, 'gradient-end')
+);
+
+// First merge the user config on top of the cradle colors in case they were overriden
+$ember-newton-cradle-gradient-colors: map-merge($ember-newton-cradle-gradient-colors, $ember-newton-cradle-loader);
+
+// Then merge cradle gradient variables to config
+$ember-newton-cradle-loader: map-merge($ember-newton-cradle-loader, $ember-newton-cradle-gradient-colors);

@@ -36,12 +36,13 @@
   @return rgb($red, $green, $blue);
 }
 
-@function linear-gradient-colors-list($start-color, $end-color) {
+@function linear-gradient-colors-list($start-color, $end-color, $steps: 8) {
   $list: ();
+  $step-multiplier: 1 / $steps;
 
-  @for $i from 1 through 8 {
-    $start-point: ($i - 1) * 0.125;
-    $end-point: $i * 0.125;
+  @for $i from 1 through $steps {
+    $start-point: ($i - 1) * $step-multiplier;
+    $end-point: $i * $step-multiplier;
 
     $gradient-a: gradient-color-at($start-color, $end-color, $start-point);
     $gradient-b: gradient-color-at($start-color, $end-color, $end-point);
@@ -58,19 +59,33 @@
   @return $list;
 }
 
-@function linear-gradient-map($color-list, $var-prefix) {
+@function cradle-gradient-map($start-color, $end-color) {
   $map: ();
+  $colors-list: linear-gradient-colors-list($start-color, $end-color);
 
-  @each $color-map in $color-list {
-    $i: index($color-list, $color-map);
+  @each $color-map in $colors-list {
+    $i: index($colors-list, $color-map);
+    $color-a: map-get($color-map, 'a');
+    $color-b: map-get($color-map, 'b');
 
     $map: map-merge(
       $map,
       (
-        '#{$var-prefix}-#{$i}': linear-gradient(to right, map-get($color-map, 'a') 0%, map-get($color-map, 'b') 100%)
+        'cradle-bg-#{$i}': linear-gradient(to right, $color-a 0%, $color-b 100%),
+        'cradle-bg-shadow-#{$i}': linear-gradient(to right, cradle-shadow($color-a) 0%, cradle-shadow($color-b) 100%)
       )
     );
   }
 
   @return $map;
+}
+
+@function cradle-shadow($color) {
+  @if type-of($color) == color {
+    $color: desaturate($color, 20%);
+    $color: lighten($color, 40%);
+  } @else {
+    $color: #ccc;
+  }
+  @return $color;
 }
