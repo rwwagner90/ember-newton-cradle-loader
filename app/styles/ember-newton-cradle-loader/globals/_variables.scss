@@ -4,7 +4,8 @@
 
 // Ember Newton Cradle Loader Defaults
 $ember-newton-cradle-loader-defaults: (
-  'cradle-size': 3em,
+  'cradle-size': 1em,
+  'swing-distance': 2.5,
   'cradle-bg-1': linear-gradient(to right, #385c78 0%, #325774 100%),
   'cradle-bg-2': linear-gradient(to right, #325774 0%, #47536a 100%),
   'cradle-bg-3': linear-gradient(to right, #4a5369 0%, #6b4d59 100%),

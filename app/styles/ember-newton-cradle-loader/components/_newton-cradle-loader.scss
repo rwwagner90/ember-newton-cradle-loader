@@ -2,6 +2,9 @@
 //  Newton Cradle Loader
 /////////////////////////////
 
+$cradle-swing-distance: (_encl('cradle-size') * _encl('swing-distance'));
+$shadow-swing-distance: (_encl('cradle-size') * (_encl('swing-distance') * 0.7));
+
 .newton-cradle-loader {
   .container {
     top: 50%;
@@ -51,13 +54,13 @@
     }
 
     100% {
-      transform: rotate(50deg) translateX(-2.5em);
+      transform: rotate(50deg) translateX(-$cradle-swing-distance);
     }
   }
 
   @keyframes ball-r {
     0% {
-      transform: rotate(-50deg) translateX(2.5em);
+      transform: rotate(-50deg) translateX($cradle-swing-distance);
     }
 
     50%,
@@ -74,14 +77,14 @@
 
     100% {
       opacity: .125;
-      transform: translateX(-1.75em);
+      transform: translateX(-$shadow-swing-distance);
     }
   }
 
   @keyframes shadow-r-n {
     0% {
       opacity: .125;
-      transform: translateX(1.75em);
+      transform: translateX($shadow-swing-distance);
     }
 
     50%,
