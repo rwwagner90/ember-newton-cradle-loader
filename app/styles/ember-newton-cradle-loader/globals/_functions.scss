@@ -72,7 +72,7 @@
       $map,
       (
         'cradle-bg-#{$i}': linear-gradient(to right, $color-a 0%, $color-b 100%),
-        'cradle-bg-shadow-#{$i}': linear-gradient(to right, cradle-shadow($color-a) 0%, cradle-shadow($color-b) 100%)
+        'cradle-shadow-#{$i}': linear-gradient(to right, cradle-shadow($color-a) 0%, cradle-shadow($color-b) 100%)
       )
     );
   }

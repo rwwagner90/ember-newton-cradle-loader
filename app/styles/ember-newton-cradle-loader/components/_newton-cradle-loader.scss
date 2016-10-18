@@ -38,7 +38,7 @@ $shadow-swing-distance: (_encl('cradle-size') * (_encl('swing-distance') * 0.7))
       border-radius: 50%;
       @for $i from 1 through 7 {
         &:nth-of-type(#{$i}) {
-          background: _encl('cradle-bg-shadow-#{$i}');
+          background: _encl('cradle-shadow-#{$i}');
         }
       }
     }
