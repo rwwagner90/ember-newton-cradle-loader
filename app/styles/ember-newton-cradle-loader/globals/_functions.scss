@@ -1,0 +1,91 @@
+//////////////////////////////
+// Functions
+//////////////////////////////
+
+///
+/// Calculates the color of a linear gradient at a specific point.
+///
+/// @param {Color}  $start  - gradient’s start color
+/// @param {Color}  $end    - gradient’s end color
+/// @param {Number} $point  - point of the gradient (between 0 and 1, or 0% and 100%) at which we want the color
+/// @return {Color}
+///
+/// @example scss
+///   background-color: gradient-color-at(#BBE087, #DCDE85, 0.4);
+///
+/// credit: https://gist.github.com/paulozoom/23ebed1c8c07d9455413
+
+@function gradient-color-at($start, $end, $point) {
+  $error-message: "$point needs to be a percentage (0% to 100%) or a unitless number (0 to 1)";
+  $unit: unit($point);
+  // $point needs to be unitless or percentage
+  @if $unit != "" and $unit != "%" {
+    @error $error-message;
+  }
+  @else {
+    // convert $point to fraction
+    @if $unit == "%" { $point: $point / 100%; }
+    // check if within bounds
+    @if $point < 0 or $point > 1 { @error $error-message; }
+  }
+
+  $red: red($start) + ($point * (red($end)- red($start)));
+  $green: green($start) + ($point * (green($end)- green($start)));
+  $blue: blue($start) + ($point * (blue($end)- blue($start)));
+
+  @return rgb($red, $green, $blue);
+}
+
+@function linear-gradient-colors-list($start-color, $end-color, $steps: 8) {
+  $list: ();
+  $step-multiplier: 1 / $steps;
+
+  @for $i from 1 through $steps {
+    $start-point: ($i - 1) * $step-multiplier;
+    $end-point: $i * $step-multiplier;
+
+    $gradient-a: gradient-color-at($start-color, $end-color, $start-point);
+    $gradient-b: gradient-color-at($start-color, $end-color, $end-point);
+
+    $list: append(
+      $list,
+      (
+        'a': $gradient-a,
+        'b': $gradient-b
+      )
+    );
+  }
+
+  @return $list;
+}
+
+@function cradle-gradient-map($start-color, $end-color) {
+  $map: ();
+  $colors-list: linear-gradient-colors-list($start-color, $end-color);
+
+  @each $color-map in $colors-list {
+    $i: index($colors-list, $color-map);
+    $color-a: map-get($color-map, 'a');
+    $color-b: map-get($color-map, 'b');
+
+    $map: map-merge(
+      $map,
+      (
+        'cradle-bg-#{$i}': linear-gradient(to right, $color-a 0%, $color-b 100%),
+        'cradle-shadow-#{$i}': linear-gradient(to right, cradle-shadow($color-a) 0%, cradle-shadow($color-b) 100%)
+      )
+    );
+  }
+
+  @return $map;
+}
+
+@function cradle-shadow($color) {
+  @if type-of($color) == color {
+    $color: desaturate($color, 20%);
+    $color: lighten($color, 40%);
+  } @else {
+    $color: #ccc;
+  }
+  @return $color;
+}

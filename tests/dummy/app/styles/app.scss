@@ -1,5 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Signika|Pacifico);
 
+$ember-newton-cradle-loader: (
+  'cradle-size': 1em,
+  'swing-distance': 1.5,
+  'shadow-distance': 1,
+  'animation-duration': .425s,
+  'gradient-start': #385c78,
+  'gradient-end': #db412c
+);
+
+@import 'ember-newton-cradle-loader';
+
 body {
   background: #ede9de;
   font-family: 'Signika', sans-serif;

@@ -1,0 +1,32 @@
+//////////////////////////////
+// Variables
+//////////////////////////////
+
+
+// Ember Newton Cradle Loader Defaults
+$ember-newton-cradle-loader-defaults: (
+  'cradle-size': 1em,
+  'swing-distance': 2.5,
+  'shadow-distance': 1.5,
+  'animation-duration': .425s,
+  'gradient-start': #385c78,
+  'gradient-end': #db412c
+);
+
+// Empty config if user does not add their own
+$ember-newton-cradle-loader: () !default;
+
+// Merge defaults and user added config
+$ember-newton-cradle-loader: map-merge($ember-newton-cradle-loader-defaults, $ember-newton-cradle-loader);
+// Calculate gradient for cradles
+$ember-newton-cradle-gradient-colors: () !default;
+$ember-newton-cradle-gradient-colors: cradle-gradient-map(
+  map-get($ember-newton-cradle-loader, 'gradient-start'),
+  map-get($ember-newton-cradle-loader, 'gradient-end')
+);
+
+// First merge the user config on top of the cradle colors in case they were overriden
+$ember-newton-cradle-gradient-colors: map-merge($ember-newton-cradle-gradient-colors, $ember-newton-cradle-loader);
+
+// Then merge cradle gradient variables to config
+$ember-newton-cradle-loader: map-merge($ember-newton-cradle-loader, $ember-newton-cradle-gradient-colors);

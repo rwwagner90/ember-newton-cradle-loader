@@ -1,0 +1,108 @@
+/////////////////////////////
+//  Newton Cradle Loader
+/////////////////////////////
+
+$cradle-swing-distance: (_encl('cradle-size') * _encl('swing-distance'));
+$shadow-swing-distance: (_encl('cradle-size') * (_encl('swing-distance') * 0.7));
+
+.newton-cradle-loader {
+  .container {
+    top: 50%;
+    left: 50%;
+    margin: auto (_encl('cradle-size') * -3.5);
+    position: absolute;
+  }
+
+  .swing div {
+    border-radius: 50%;
+    float: left;
+    height: _encl('cradle-size');
+    width: _encl('cradle-size');
+
+    @for $i from 1 through 7 {
+      &:nth-of-type(#{$i}) {
+        background: _encl('cradle-bg-#{$i}');
+      }
+    }
+  }
+
+  .shadow {
+    clear: left;
+    padding-top: (_encl('cradle-size') * _encl('shadow-distance'));
+
+    div {
+      filter: blur(1px);
+      float: left;
+      width: _encl('cradle-size');
+      height: .25em;
+      border-radius: 50%;
+      @for $i from 1 through 7 {
+        &:nth-of-type(#{$i}) {
+          background: _encl('cradle-shadow-#{$i}');
+        }
+      }
+    }
+  }
+
+  @keyframes ball-l {
+    0%, 50% {
+      transform: rotate(0) translateX(0);
+    }
+
+    100% {
+      transform: rotate(50deg) translateX(-$cradle-swing-distance);
+    }
+  }
+
+  @keyframes ball-r {
+    0% {
+      transform: rotate(-50deg) translateX($cradle-swing-distance);
+    }
+
+    50%,
+    100% {
+      transform: rotate(0) translateX(0)
+    }
+  }
+
+  @keyframes shadow-l-n {
+    0%, 50% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    100% {
+      opacity: .125;
+      transform: translateX(-$shadow-swing-distance);
+    }
+  }
+
+  @keyframes shadow-r-n {
+    0% {
+      opacity: .125;
+      transform: translateX($shadow-swing-distance);
+    }
+
+    50%,
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .swing-l {
+    animation: ball-l _encl('animation-duration') ease-in-out infinite alternate;
+  }
+
+  .swing-r {
+    animation: ball-r _encl('animation-duration') ease-in-out infinite alternate;
+  }
+
+  .shadow-l {
+    animation: shadow-l-n _encl('animation-duration') ease-in-out infinite alternate;
+  }
+
+  .shadow-r {
+    animation: shadow-r-n _encl('animation-duration') ease-in-out infinite alternate;
+  }
+}

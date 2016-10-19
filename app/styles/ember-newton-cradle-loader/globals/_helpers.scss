@@ -1,0 +1,13 @@
+//////////////////////////////
+// Helpers
+//////////////////////////////
+
+///
+/// Shortcut function for getting value from $ember-newton-cradle-loader map
+/// @access private
+/// @param {String} $key - Key of value to be retrieved
+/// @return Value of key in $ember-newton-cradle-loader
+///
+@function _encl($key) {
+  @return map-get($ember-newton-cradle-loader, $key);
+}
