@@ -1,11 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Signika|Pacifico);
 
 $ember-newton-cradle-loader: (
-  'cradle-bg-1': blue,
-  'cradle-shadow-1': darkblue,
-  'cradle-size': 2em,
-  'swing-distance': 0.5,
-  'shadow-distance': 1.5,
+  'cradle-size': 1em,
+  'swing-distance': 1.5,
+  'shadow-distance': 1,
   'animation-duration': .425s,
   'gradient-start': #385c78,
   'gradient-end': #db412c
