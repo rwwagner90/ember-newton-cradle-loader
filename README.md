@@ -26,7 +26,7 @@ You can also use this loader as a component, wherever you like, by simply includ
 
 Ember-Newton-Cradle-Loader uses Sass for styles. The default styles for the cradle loader are stored in an overridable Sass map. This is accomplished by supplying a `$ember-newton-cradle-loader` map with any or all of the keys found in the defaults map below.
 
-```
+```scss
 $ember-newton-cradle-loader: (
   'cradle-size': 1em,
   'swing-distance': 2.5,
@@ -39,7 +39,7 @@ $ember-newton-cradle-loader: (
 
 There are seven more keys (in the form of `cradle-bg-n`) in the map available for customizing the background of the individual cradles, as well as seven more for customizing the shadow for each cradle (`cradle-shadow-n`), where `n` is the position of the cradle you want to customize. The individual cradle configurations will override the gradient on that cradle, even if it was manually specified. Customizing a cradle with its corresponding background could look like this:
 
-```
+```scss
 $ember-newton-cradle-loader: (
   'cradle-bg-1': blue,
   'cradle-shadow-1': darkblue
@@ -50,6 +50,6 @@ Under the hood, the addon will merge the default settings and any settings suppl
 
 Be sure to `@import` the styles into your project *after* the map if you're using it to customize the look:
 
-```
+```scss
 @import 'ember-newton-cradle-loader';
 ```
