@@ -2,25 +2,39 @@
   "name": "ember-newton-cradle-loader",
   "version": "0.2.0",
   "description": "Ember addon for showing a newton cradle loading animation",
+  "keywords": [
+    "ember-addon",
+    "loading",
+    "indicator",
+    "newton cradle",
+    "spinner"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Robert Wagner",
+    "email": "rwwagner90@gmail.com",
+    "url": "https://github.com/rwwagner90"
+  },
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
+  "repository": "https://github.com/shipshapecode/ember-newton-cradle-loader",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
     "test": "ember try:each"
   },
-  "repository": "https://github.com/shipshapecode/ember-newton-cradle-loader",
-  "engines": {
-    "node": ">= 0.10.0"
+  "dependencies": {
+    "ember-cli-babel": "^5.1.7",
+    "ember-cli-htmlbars": "^1.0.10",
+    "ember-cli-sass": "5.6.0"
   },
-  "author": "",
-  "license": "MIT",
   "devDependencies": {
     "babel-eslint": "^7.0.0",
     "broccoli-asset-rev": "^2.4.5",
-    "ember-cli": "2.9.0-beta.2",
+    "ember-assign-polyfill": "1.0.0",
+    "ember-cli": "2.10.0-beta.2",
     "ember-cli-app-version": "^2.0.0",
     "ember-cli-dependency-checker": "^1.3.0",
     "ember-cli-eslint": "3.0.0",
@@ -41,13 +55,8 @@
     "flexi": "1.2.0",
     "loader.js": "^4.0.10"
   },
-  "keywords": [
-    "ember-addon"
-  ],
-  "dependencies": {
-    "ember-cli-babel": "^5.1.7",
-    "ember-cli-htmlbars": "^1.0.10",
-    "ember-cli-sass": "5.6.0"
+  "engines": {
+    "node": ">= 0.12.0"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
