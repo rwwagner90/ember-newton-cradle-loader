@@ -303,7 +303,7 @@ babel-core@^5.0.0, babel-core@^5.8.38:
     trim-right "^1.0.0"
     try-resolve "^1.0.0"
 
-babel-eslint@^7.1.1:
+babel-eslint@^7.1.0, babel-eslint@^7.1.1:
   version "7.1.1"
   resolved "https://registry.npmjs.org/babel-eslint/-/babel-eslint-7.1.1.tgz#8a6a884f085aa7060af69cfc77341c2f99370fb2"
   dependencies:
@@ -787,17 +787,6 @@ broccoli-plugin@^1.0.0, broccoli-plugin@^1.2.0, broccoli-plugin@^1.2.1, broccoli
     quick-temp "^0.1.3"
     rimraf "^2.3.4"
     symlink-or-copy "^1.1.8"
-
-broccoli-sass-source-maps@^1.8.0:
-  version "1.8.1"
-  resolved "https://registry.npmjs.org/broccoli-sass-source-maps/-/broccoli-sass-source-maps-1.8.1.tgz#115e32be25dc5f1686af1c8d1fa4c4c62749f0b6"
-  dependencies:
-    broccoli-caching-writer "^3.0.3"
-    include-path-searcher "^0.1.0"
-    mkdirp "^0.3.5"
-    node-sass "^3.8.0"
-    object-assign "^2.0.0"
-    rsvp "^3.0.6"
 
 broccoli-sass-source-maps@^2.0.0:
   version "2.0.0"
@@ -1576,7 +1565,7 @@ ember-cli-htmlbars-inline-precompile@^0.3.3:
     ember-cli-htmlbars "^1.0.0"
     hash-for-dep "^1.0.2"
 
-ember-cli-htmlbars@^1.0.0, ember-cli-htmlbars@^1.0.10, ember-cli-htmlbars@^1.0.3:
+ember-cli-htmlbars@^1.0.0, ember-cli-htmlbars@^1.0.3, ember-cli-htmlbars@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/ember-cli-htmlbars/-/ember-cli-htmlbars-1.1.1.tgz#8776cf59796dac8f32e8625fc6d1ea45ffa55de1"
   dependencies:
@@ -1672,18 +1661,7 @@ ember-cli-release@^0.2.9:
     semver "^4.3.1"
     silent-error "^1.0.0"
 
-ember-cli-sass@^5.3.1:
-  version "5.6.0"
-  resolved "https://registry.npmjs.org/ember-cli-sass/-/ember-cli-sass-5.6.0.tgz#792de67544bb903eef421a3e59c484840fea5352"
-  dependencies:
-    broccoli-funnel "^1.0.0"
-    broccoli-merge-trees "^1.1.0"
-    broccoli-sass-source-maps "^1.8.0"
-    ember-cli-babel "5.1.10"
-    ember-cli-version-checker "^1.0.2"
-    merge "^1.2.0"
-
-ember-cli-sass@^6.1.0:
+ember-cli-sass@^6.0.0, ember-cli-sass@^6.1.0:
   version "6.1.0"
   resolved "https://registry.npmjs.org/ember-cli-sass/-/ember-cli-sass-6.1.0.tgz#64f0ed0885ae6077bc302f5cd84213e71148ba5f"
   dependencies:
@@ -1732,7 +1710,7 @@ ember-cli-version-checker@^1.0.2, ember-cli-version-checker@^1.1.4, ember-cli-ve
   dependencies:
     semver "^5.3.0"
 
-ember-cli@^2.11.0-beta.1:
+ember-cli@2.11.0-beta.1:
   version "2.11.0-beta.1"
   resolved "https://registry.npmjs.org/ember-cli/-/ember-cli-2.11.0-beta.1.tgz#c6d8c4935e45f79977192f81c9dfd79627424ed0"
   dependencies:
@@ -1815,6 +1793,12 @@ ember-cli@^2.11.0-beta.1:
     walk-sync "^0.3.0"
     yam "0.0.22"
 
+ember-debonair@0.3.0:
+  version "0.3.0"
+  resolved "https://registry.npmjs.org/ember-debonair/-/ember-debonair-0.3.0.tgz#a0be0e50ebfb6a9ab67cf6e8c9c6d26d4c9a92a8"
+  dependencies:
+    ember-cli-babel "^5.1.7"
+
 ember-disable-prototype-extensions@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/ember-disable-prototype-extensions/-/ember-disable-prototype-extensions-1.1.0.tgz#86081c8cf6741f26e4b89e2b004f761174313e01"
@@ -1834,7 +1818,7 @@ ember-getowner-polyfill@^1.0.1:
     ember-cli-babel "^5.1.6"
     ember-cli-version-checker "^1.2.0"
 
-ember-load-initializers@^0.6.3:
+ember-load-initializers@^0.6.0:
   version "0.6.3"
   resolved "https://registry.npmjs.org/ember-load-initializers/-/ember-load-initializers-0.6.3.tgz#f47396ad271ba77294068c98f992a5f19705441a"
   dependencies:
@@ -1858,6 +1842,22 @@ ember-router-generator@^1.0.0:
   resolved "https://registry.npmjs.org/ember-router-generator/-/ember-router-generator-1.2.2.tgz#62dac1f63e873553e6d4c7e32da6589e577bcf63"
   dependencies:
     recast "^0.11.3"
+
+ember-source@^2.11.0-beta.2:
+  version "2.11.0-beta.2"
+  resolved "https://registry.npmjs.org/ember-source/-/ember-source-2.11.0-beta.2.tgz#a96c27e908503aa61438175b2c981e8a0acb36c6"
+  dependencies:
+    broccoli-stew "^1.2.0"
+    ember-cli-get-component-path-option "^1.0.0"
+    ember-cli-normalize-entity-name "^1.0.0"
+    ember-cli-path-utils "^1.0.0"
+    ember-cli-string-utils "^1.0.0"
+    ember-cli-test-info "^1.0.0"
+    ember-cli-valid-component-name "^1.0.0"
+    jquery "^3.1.1"
+    resolve "^1.1.7"
+    rsvp "^3.3.3"
+    simple-dom "^0.3.0"
 
 ember-test-helpers@^0.6.0-beta.1:
   version "0.6.0-beta.1"
@@ -2041,10 +2041,11 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-plugin-ember-suave@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/eslint-plugin-ember-suave/-/eslint-plugin-ember-suave-1.0.0.tgz#ea7d232a126562dcd8b1ee3aa2700ac3b626e514"
+eslint-plugin-ship-shape@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.npmjs.org/eslint-plugin-ship-shape/-/eslint-plugin-ship-shape-0.4.0.tgz#5e957dda8267eb6350b295b4d4dc26b2aaf34da5"
   dependencies:
+    babel-eslint "^7.1.0"
     requireindex "~1.1.0"
 
 eslint@^3.0.0:
@@ -2360,9 +2361,9 @@ flat-cache@^1.2.1:
     graceful-fs "^4.1.2"
     write "^0.2.1"
 
-flexi@1.2.0:
+flexi@html-next/flexi:
   version "1.2.0"
-  resolved "https://registry.npmjs.org/flexi/-/flexi-1.2.0.tgz#b03ccb23a11fbb33b6f68624f5f4c82bf29ee9a5"
+  resolved "https://codeload.github.com/html-next/flexi/tar.gz/70f6618ec47762433d8680d8505cb88938e840dc"
   dependencies:
     broccoli-funnel "^1.0.1"
     broccoli-merge-trees "^1.1.1"
@@ -3167,6 +3168,10 @@ jodid25519@^1.0.0:
   dependencies:
     jsbn "~0.1.0"
 
+jquery@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.npmjs.org/jquery/-/jquery-3.1.1.tgz#347c1c21c7e004115e0a4da32cece041fad3c8a3"
+
 js-string-escape@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmjs.org/js-string-escape/-/js-string-escape-1.0.1.tgz#e2625badbc0d67c7533e9edc1068c587ae4137ef"
@@ -3807,11 +3812,11 @@ mustache@^2.2.1:
   version "2.3.0"
   resolved "https://registry.npmjs.org/mustache/-/mustache-2.3.0.tgz#4028f7778b17708a489930a6e52ac3bca0da41d0"
 
-mute-stream@0.0.5, mute-stream@~0.0.4:
+mute-stream@0.0.5:
   version "0.0.5"
   resolved "https://registry.npmjs.org/mute-stream/-/mute-stream-0.0.5.tgz#8fbfabb0a98a253d3184331f9e8deb7372fac6c0"
 
-mute-stream@0.0.6:
+mute-stream@0.0.6, mute-stream@~0.0.4:
   version "0.0.6"
   resolved "https://registry.npmjs.org/mute-stream/-/mute-stream-0.0.6.tgz#48962b19e169fd1dfc240b3f1e7317627bbc47db"
 
@@ -3884,27 +3889,6 @@ node-notifier@^4.3.1:
     semver "^5.1.0"
     shellwords "^0.1.0"
     which "^1.0.5"
-
-node-sass@^3.8.0:
-  version "3.13.1"
-  resolved "https://registry.npmjs.org/node-sass/-/node-sass-3.13.1.tgz#7240fbbff2396304b4223527ed3020589c004fc2"
-  dependencies:
-    async-foreach "^0.1.3"
-    chalk "^1.1.1"
-    cross-spawn "^3.0.0"
-    gaze "^1.0.0"
-    get-stdin "^4.0.1"
-    glob "^7.0.3"
-    in-publish "^2.0.0"
-    lodash.assign "^4.2.0"
-    lodash.clonedeep "^4.3.2"
-    meow "^3.7.0"
-    mkdirp "^0.5.1"
-    nan "^2.3.2"
-    node-gyp "^3.3.1"
-    npmlog "^4.0.0"
-    request "^2.61.0"
-    sass-graph "^2.1.1"
 
 node-sass@^4.1.0:
   version "4.2.0"
@@ -4713,7 +4697,7 @@ resolve@1.1.x:
   version "1.1.7"
   resolved "https://registry.npmjs.org/resolve/-/resolve-1.1.7.tgz#203114d82ad2c5ed9e8e0411b3932875e889e97b"
 
-resolve@^1.1.2, resolve@^1.1.6:
+resolve@^1.1.2, resolve@^1.1.6, resolve@^1.1.7:
   version "1.2.0"
   resolved "https://registry.npmjs.org/resolve/-/resolve-1.2.0.tgz#9589c3f2f6149d1417a40becc1663db6ec6bc26c"
 
@@ -4870,6 +4854,10 @@ silent-error@^1.0.0, silent-error@^1.0.1:
   resolved "https://registry.npmjs.org/silent-error/-/silent-error-1.0.1.tgz#71b7d503d1c6f94882b51b56be879b113cb4822c"
   dependencies:
     debug "^2.2.0"
+
+simple-dom@^0.3.0:
+  version "0.3.2"
+  resolved "https://registry.npmjs.org/simple-dom/-/simple-dom-0.3.2.tgz#0663d10f1556f1500551d518f56e3aba0871371d"
 
 simple-fmt@~0.1.0:
   version "0.1.0"
