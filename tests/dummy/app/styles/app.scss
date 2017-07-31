@@ -4,7 +4,7 @@ $ember-newton-cradle-loader: (
   'cradle-size': 1em,
   'swing-distance': 1.5,
   'shadow-distance': 1,
-  'animation-duration': .425s,
+  'animation-duration': 0.425s,
   'gradient-start': #385c78,
   'gradient-end': #db412c
 );
@@ -17,7 +17,7 @@ body {
   font-family: $f-primary;
 }
 
-h1{
+h1 {
   font-size: 5vw;
 }
 
