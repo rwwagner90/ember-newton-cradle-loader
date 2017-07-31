@@ -83,7 +83,7 @@
 @function cradle-shadow($color) {
   @if type-of($color) == color {
     $color: desaturate($color, 20%);
-    $color: lighten($color, 40%);
+    $color: darken($color, 40%);
   } @else {
     $color: #ccc;
   }

@@ -6,7 +6,7 @@ export default Route.extend({
     return new RSVP.Promise((resolve) => {
       run.later(() => {
         resolve({});
-      }, 3000);
+      }, 5000);
     });
   }
 });

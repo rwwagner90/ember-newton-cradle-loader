@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Signika|Pacifico);
+@import 'fonts';
 
 $ember-newton-cradle-loader: (
   'cradle-size': 1em,
@@ -12,11 +12,15 @@ $ember-newton-cradle-loader: (
 @import 'ember-newton-cradle-loader';
 
 body {
-  background: #ede9de;
-  font-family: 'Signika', sans-serif;
+  background: #3d2f53;
+  color: #f5f0e1;
+  font-family: $f-primary;
 }
 
-h1 {
-  font-family: 'Pacifico';
-  font-size: 7vw;
+h1{
+  font-size: 5vw;
+}
+
+.pacifico {
+  font-family: $f-pacifico;
 }
