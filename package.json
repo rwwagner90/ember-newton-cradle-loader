@@ -1,6 +1,6 @@
 {
   "name": "ember-newton-cradle-loader",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Ember addon for showing a newton cradle loading animation",
   "keywords": [
     "ember-addon",
