@@ -1,0 +1,133 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@font-face {
+  font-family: 'Pier Sans';
+  src: url("../../fonts/PierSans-BoldItalic.eot");
+  src: url("../../fonts/PierSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../../fonts/PierSans-BoldItalic.woff") format("woff"), url("../../fonts/PierSans-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Pier Sans';
+  src: url("../../fonts/PierSans-Italic.eot");
+  src: url("../../fonts/PierSans-Italic.eot?#iefix") format("embedded-opentype"), url("../../fonts/PierSans-Italic.woff") format("woff"), url("../../fonts/PierSans-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Pier Sans';
+  src: url("../../fonts/PierSans.eot");
+  src: url("../../fonts/PierSans.eot?#iefix") format("embedded-opentype"), url("../../fonts/PierSans.woff") format("woff"), url("../../fonts/PierSans.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Pier Sans';
+  src: url("../../fonts/PierSans-Bold.eot");
+  src: url("../../fonts/PierSans-Bold.eot?#iefix") format("embedded-opentype"), url("../../fonts/PierSans-Bold.woff") format("woff"), url("../../fonts/PierSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+.newton-cradle-loader .container {
+  top: 50%;
+  left: 50%;
+  margin: auto -3.5em;
+  position: absolute; }
+
+.newton-cradle-loader .swing div {
+  border-radius: 50%;
+  float: left;
+  height: 1em;
+  width: 1em; }
+  .newton-cradle-loader .swing div:nth-of-type(1) {
+    background: linear-gradient(to right, #385c78 0%, #4c596f 100%); }
+  .newton-cradle-loader .swing div:nth-of-type(2) {
+    background: linear-gradient(to right, #4c596f 0%, #615565 100%); }
+  .newton-cradle-loader .swing div:nth-of-type(3) {
+    background: linear-gradient(to right, #615565 0%, #75525c 100%); }
+  .newton-cradle-loader .swing div:nth-of-type(4) {
+    background: linear-gradient(to right, #75525c 0%, #8a4f52 100%); }
+  .newton-cradle-loader .swing div:nth-of-type(5) {
+    background: linear-gradient(to right, #8a4f52 0%, #9e4b49 100%); }
+  .newton-cradle-loader .swing div:nth-of-type(6) {
+    background: linear-gradient(to right, #9e4b49 0%, #b2483f 100%); }
+  .newton-cradle-loader .swing div:nth-of-type(7) {
+    background: linear-gradient(to right, #b2483f 0%, #c74436 100%); }
+
+.newton-cradle-loader .shadow {
+  clear: left;
+  padding-top: 1em; }
+  .newton-cradle-loader .shadow div {
+    filter: blur(1px);
+    float: left;
+    width: 1em;
+    height: .25em;
+    border-radius: 50%; }
+    .newton-cradle-loader .shadow div:nth-of-type(1) {
+      background: linear-gradient(to right, black 0%, black 100%); }
+    .newton-cradle-loader .shadow div:nth-of-type(2) {
+      background: linear-gradient(to right, black 0%, black 100%); }
+    .newton-cradle-loader .shadow div:nth-of-type(3) {
+      background: linear-gradient(to right, black 0%, black 100%); }
+    .newton-cradle-loader .shadow div:nth-of-type(4) {
+      background: linear-gradient(to right, black 0%, #060606 100%); }
+    .newton-cradle-loader .shadow div:nth-of-type(5) {
+      background: linear-gradient(to right, #060606 0%, #0f0b0b 100%); }
+    .newton-cradle-loader .shadow div:nth-of-type(6) {
+      background: linear-gradient(to right, #0f0b0b 0%, #180e0d 100%); }
+    .newton-cradle-loader .shadow div:nth-of-type(7) {
+      background: linear-gradient(to right, #180e0d 0%, #21110f 100%); }
+
+@keyframes ball-l {
+  0%, 50% {
+    transform: rotate(0) translateX(0); }
+  100% {
+    transform: rotate(50deg) translateX(-1.5em); } }
+
+@keyframes ball-r {
+  0% {
+    transform: rotate(-50deg) translateX(1.5em); }
+  50%,
+  100% {
+    transform: rotate(0) translateX(0); } }
+
+@keyframes shadow-l-n {
+  0%, 50% {
+    opacity: 1;
+    transform: translateX(0); }
+  100% {
+    opacity: .125;
+    transform: translateX(-1.05em); } }
+
+@keyframes shadow-r-n {
+  0% {
+    opacity: .125;
+    transform: translateX(1.05em); }
+  50%,
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+.newton-cradle-loader .swing-l {
+  animation: ball-l 0.425s ease-in-out infinite alternate; }
+
+.newton-cradle-loader .swing-r {
+  animation: ball-r 0.425s ease-in-out infinite alternate; }
+
+.newton-cradle-loader .shadow-l {
+  animation: shadow-l-n 0.425s ease-in-out infinite alternate; }
+
+.newton-cradle-loader .shadow-r {
+  animation: shadow-r-n 0.425s ease-in-out infinite alternate; }
+
+body {
+  background: #3d2f53;
+  color: #f5f0e1;
+  font-family: "Pier Sans", sans-serif; }
+
+h1 {
+  font-size: 5vw; }
+
+.pacifico {
+  font-family: "Pacifico"; }
+
+/*# sourceMappingURL=dummy.css.map */
