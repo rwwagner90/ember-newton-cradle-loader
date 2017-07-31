@@ -20,7 +20,7 @@ test('swing html', function(assert) {
   this.render(hbs`{{newton-cradle-loader}}`);
 
   assert.equal(this.$('.swing').html().trim(),
-  `<div class="swing-l"></div>
+    `<div class="swing-l"></div>
     <div></div>
     <div></div>
     <div></div>
@@ -35,7 +35,7 @@ test('shadow html', function(assert) {
   this.render(hbs`{{newton-cradle-loader}}`);
 
   assert.equal(this.$('.shadow').html().trim(),
-  `<div class="shadow-l"></div>
+    `<div class="shadow-l"></div>
     <div></div>
     <div></div>
     <div></div>
