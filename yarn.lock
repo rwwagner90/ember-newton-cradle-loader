@@ -7516,9 +7516,9 @@ stylelint-config-recommended@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/stylelint-config-recommended/-/stylelint-config-recommended-1.0.0.tgz#752c17fc68fa64cd5e7589e24f6e46e77e14a735"
 
-stylelint-config-ship-shape@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-ship-shape/-/stylelint-config-ship-shape-0.2.0.tgz#7c88cd975c9cba1da5878976ba986618821240da"
+stylelint-config-ship-shape@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-ship-shape/-/stylelint-config-ship-shape-0.4.0.tgz#cde6eb659ba4ea67977e20500855833ca67f6219"
   dependencies:
     stylelint-config-standard "^17.0.0"
     stylelint-declaration-strict-value "^1.0.4"
