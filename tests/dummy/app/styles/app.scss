@@ -1,5 +1,8 @@
 @import 'fonts';
 
+$color-tan: #f5f0e1;
+$heading-font-size: 5vw;
+
 $ember-newton-cradle-loader: (
   'cradle-size': 1em,
   'swing-distance': 1.5,
@@ -13,12 +16,12 @@ $ember-newton-cradle-loader: (
 
 body {
   background: #3d2f53;
-  color: #f5f0e1;
+  color: $color-tan;
   font-family: $f-primary;
 }
 
 h1 {
-  font-size: 5vw;
+  font-size: $heading-font-size;
 }
 
 .pacifico {
