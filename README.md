@@ -11,7 +11,7 @@
 [![Code Climate](https://codeclimate.com/github/shipshapecode/ember-newton-cradle-loader/badges/gpa.svg)](https://codeclimate.com/github/shipshapecode/ember-newton-cradle-loader)
 [![Test Coverage](https://codeclimate.com/github/shipshapecode/ember-newton-cradle-loader/badges/coverage.svg)](https://codeclimate.com/github/shipshapecode/ember-newton-cradle-loader/coverage)
 
-[![Demo](http://i.imgur.com/hDPxb2H.gif)](http://shipshapecode.github.io/ember-newton-cradle-loader/)
+[![Demo](http://i.imgur.com/hDPxb2H.gif)](http://shipshapecode.github.io/ember-newton-cradle-loader/) [![Greenkeeper badge](https://badges.greenkeeper.io/shipshapecode/ember-newton-cradle-loader.svg)](https://greenkeeper.io/)
 [http://shipshapecode.github.io/ember-newton-cradle-loader/](http://shipshapecode.github.io/ember-newton-cradle-loader/)
 
 # Installation
