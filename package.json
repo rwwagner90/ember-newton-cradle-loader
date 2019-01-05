@@ -31,7 +31,7 @@
   "dependencies": {
     "ember-cli-babel": "^7.1.2",
     "ember-cli-htmlbars": "^3.0.0",
-    "ember-cli-sass": "^7.0.0"
+    "ember-cli-sass": "^8.0.1"
   },
   "devDependencies": {
     "@ember/optional-features": "^0.6.3",
@@ -69,6 +69,7 @@
     "flexi": "^2.1.0",
     "loader.js": "^4.7.0",
     "qunit-dom": "^0.8.0",
+    "sass": "^1.15.3",
     "stylelint-config-ship-shape": "^0.4.0"
   },
   "engines": {
