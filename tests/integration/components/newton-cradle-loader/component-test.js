@@ -1,45 +1,47 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render, find } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('newton-cradle-loader', 'Integration | Component | newton cradle loader', {
-  integration: true
-});
+module('Integration | Component | newton cradle loader', function(hooks) {
+  setupRenderingTest(hooks);
 
-test('newton cradle renders', function(assert) {
-  assert.expect(2);
+  test('newton cradle renders', async function(assert) {
+    assert.expect(2);
 
-  this.render(hbs`{{newton-cradle-loader}}`);
+    await render(hbs`{{newton-cradle-loader}}`);
 
-  assert.ok(this.$('.swing').is(':visible'));
-  assert.ok(this.$('.shadow').is(':visible'));
-});
+    assert.dom('.swing').exists();
+    assert.dom('.shadow').exists();
+  });
 
-test('swing html', function(assert) {
-  assert.expect(1);
+  test('swing html', async function(assert) {
+    assert.expect(1);
 
-  this.render(hbs`{{newton-cradle-loader}}`);
+    await render(hbs`{{newton-cradle-loader}}`);
 
-  assert.equal(this.$('.swing').html().trim(),
-    `<div class="swing-l"></div>
+    assert.equal(find('.swing').innerHTML.trim(),
+      `<div class="swing-l"></div>
     <div></div>
     <div></div>
     <div></div>
     <div></div>
     <div></div>
     <div class="swing-r"></div>`);
-});
+  });
 
-test('shadow html', function(assert) {
-  assert.expect(1);
+  test('shadow html', async function(assert) {
+    assert.expect(1);
 
-  this.render(hbs`{{newton-cradle-loader}}`);
+    await render(hbs`{{newton-cradle-loader}}`);
 
-  assert.equal(this.$('.shadow').html().trim(),
-    `<div class="shadow-l"></div>
+    assert.equal(find('.shadow').innerHTML.trim(),
+      `<div class="shadow-l"></div>
     <div></div>
     <div></div>
     <div></div>
     <div></div>
     <div></div>
     <div class="shadow-r"></div>`);
+  });
 });
